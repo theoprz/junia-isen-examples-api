@@ -30,7 +30,13 @@ export DATABASE_PASSWORD='' # Use single quotes to avoid shell interpolation wit
 export STORAGE_ACCOUNT_URL=
 
 # Run the application
-uv run fastapi dev main.py
+uv run fastapi dev examples/examples.py
+```
+
+## Run tests
+
+```
+uv run pytest tests/
 ```
 
 They go on:

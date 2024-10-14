@@ -8,9 +8,9 @@ WORKDIR /app
 ADD pyproject.toml uv.lock .python-version /app/
 RUN uv sync --frozen
 
-ADD main.py /app/
+ADD examples/examples.py /app/examples/examples.py
 
 EXPOSE 80
 
 ENTRYPOINT ["uv", "run", "newrelic-admin", "run-program"]
-CMD ["fastapi", "dev", "main.py", "--host", "0.0.0.0", "--port", "80"]
+CMD ["fastapi", "dev", "examples/examples.py", "--host", "0.0.0.0", "--port", "80"]

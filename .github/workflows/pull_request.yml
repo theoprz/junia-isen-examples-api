@@ -29,4 +29,4 @@ jobs:
       - name: Build du projet
         run: uv build
       - name: Lancement des tests unitaires
-        run: uv run pytest ../../test/
+        run: uv run pytest tests/

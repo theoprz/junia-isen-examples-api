@@ -1,0 +1,32 @@
+name: CI Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Téléchargement du dépôt
+        uses: actions/checkout@v3
+      - name: Paramétrage de Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+      - name: Paramétrage de UV (Outil Python)
+        uses: yezz123/setup-uv@v4
+      - name: Check de la version d'UV
+        run: uv --version
+      - name: Installation des dépendances
+        run: uv sync
+      - name: Build du projet
+        run: uv build
+      - name: Lancement des tests unitaires
+        run: uv run pytest tests/

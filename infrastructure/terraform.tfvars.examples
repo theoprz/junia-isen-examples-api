@@ -1,0 +1,13 @@
+# Identifiant d'abonnement Azure
+subscription_id = "00000000-0000-0000-0000-000000000000"
+
+# Identifiants du registre Docker (Ici, les identifiants Github car GCR utilisé)
+docker_registry_password = "Mot de Passe"
+docker_registry_username = "Nom d'Utilisateur"
+
+# Identifiants à créer pour la BDD
+administrator_login = "Identifiant"
+administrator_password = "Mot de Passe"
+
+# Clé de license NewRelic à créer sur le dashboard de NewRelic
+new_relic_license_key = "0000000000000000000000000000000000000000"

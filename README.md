@@ -4,7 +4,7 @@ Ce projet propose une solution de **cloud computing déployée sur Azure**, comb
 
 ---
 
-### **Équipe du Projet**
+### **L'équipe du projet**
 
 Le projet a été réalisé par un groupe d'étudiants en **Cybersécurité** de **Junia ISEN Lille**. L'équipe est composée de :
 
@@ -66,7 +66,7 @@ terraform apply
 
 ### **Difficultés rencontrées :**
 
-Lors de la mise en place du pipeline de déploiement continu (CD), une difficulté a été rencontrée concernant l'accès à certains services Azure nécessaires pour l'automatisation du déploiement.
+Lors de la mise en place du CD, une difficulté a été rencontrée concernant l'accès à certains services Azure nécessaires pour l'automatisation du déploiement.
 
 - **Problème d'accès au clientId et clientSecret** : 
   Pour que le déploiement via GitHub Actions fonctionne correctement, il est nécessaire de disposer des identifiants d'un **clientId** et d'un **clientSecret** associés à un service Azure. Ces identifiants sont spécifiques au compte Azure utilisé et sont générés par l'administrateur du service. Cependant, l'accès à ces informations est restreint aux administrateurs Junia, ce qui empêche leur utilisation avec notre compte étudiant. En conséquence, cette partie du pipeline CD qui repose sur des autorisations administratives pour le déploiement automatisé, n'a pas pu être configurée.
